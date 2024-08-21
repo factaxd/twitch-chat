@@ -30,3 +30,22 @@ You can install the required libraries using:
 
 ```bash
 pip install requests Pillow requests_oauthlib
+
+
+## Getting Started
+
+Follow these steps to run the project locally.
+
+### 1. Clone the Repository
+
+First, clone this repository to your local machine:
+
+```bash
+git clone https://github.com/your-username/twitch-chat-reader.git
+cd twitch-chat-reader
+
+
+### 2. Set Up Twitch Developer App
+
+To authenticate with Twitch, you need to create a Twitch Developer App to get your Client ID and Client Secret.
+
