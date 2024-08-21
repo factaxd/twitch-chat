@@ -31,6 +31,10 @@ You can install the required libraries using:
 ```bash
 pip install requests Pillow requests_oauthlib
 ```
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
 
 ## Getting Started
 
