@@ -30,7 +30,7 @@ You can install the required libraries using:
 
 ```bash
 pip install requests Pillow requests_oauthlib
-
+```
 
 ## Getting Started
 
@@ -43,9 +43,29 @@ First, clone this repository to your local machine:
 ```bash
 git clone https://github.com/your-username/twitch-chat-reader.git
 cd twitch-chat-reader
-
+```
 
 ### 2. Set Up Twitch Developer App
 
 To authenticate with Twitch, you need to create a Twitch Developer App to get your Client ID and Client Secret.
 
+- Go to the Twitch Developers Console and create a new app.
+- Set the OAuth Redirect URL to http://localhost:3000.
+- Copy the Client ID and Client Secret provided by Twitch.
+
+
+### 3. Update config.py
+
+Open the config.py file and replace the placeholders with your Client ID and Client Secret.
+
+```bash
+class Config:
+    CLIENT_ID = "your_twitch_client_id"  # Add your Twitch Client ID here
+    CLIENT_SECRET = "your_twitch_client_secret"  # Add your Twitch Client Secret here
+    REDIRECT_URI = "http://localhost:3000"
+    IRC_TOKEN = "oauth:your_oauth_token"  # This will be set dynamically after login
+    USERNAME = "your_twitch_username"     # Leave this as-is; it's set dynamically
+    CHANNEL = ""  # This is dynamically set to your username after login
+    PORT = 3000   # Local server port for OAuth redirection
+    SCOPE = ['user:read:email', 'chat:read']  # Required Twitch permission
+```
